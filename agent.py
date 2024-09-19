@@ -1,6 +1,7 @@
 import supabase_operations
 import os
 import time
+from newsapi import NewsApiClient
 from datetime import datetime, timedelta
 import pytz
 from supabase import create_client, Client
@@ -40,6 +41,10 @@ OPENAI_KEY = os.getenv('OPENAI_API_KEY')
 client = instructor.from_openai(OpenAI(api_key=OPENAI_KEY))
 #client = instructor.from_openai(OpenAI()) #Change the naming, maybe?
 
+#Access the NewsAPI
+NEWSAPI_KEY = os.getenv('NEWSAPI_KEY')
+newsapi = NewsApiClient(api_key=NEWSAPI_KEY)
+
 # Create supabase client
 SUPABASE_URL = os.getenv('SUPABASE_URL')
 SUPABASE_KEY = os.getenv('SUPABASE_ANON_KEY')
@@ -70,6 +75,14 @@ def get_current_time():
     time_str = current_time.strftime("%Y-%m-%d %H:%M:%S %Z%z")
     lower_bound_time = (time_str[:10])
     return lower_bound_time
+
+def get_yesterday_time():
+    current_time = datetime.now()
+    time_str = current_time.strftime("%Y-%m-%d %H:%M:%S %Z%z")
+    lower_bound_time = (time_str[:10])
+    yesterday = datetime.now() - timedelta(days=1)
+    yesterday_str = yesterday.strftime("%Y-%m-%d %H:%M:%S %Z%z")
+    return yesterday_str[:10]
 
 
 #Used to return the string using the website and topic and date
@@ -116,7 +129,26 @@ def find_articles_today():
                 count+=1
             print(count)
 
-find_articles_today()
+#find_articles_today()
+
+top_headlines = newsapi.get_top_headlines(q='economics',
+    language='en')
+
+all_articles = newsapi.get_everything(q='economics',
+    sources='bbc-news,the-verge',
+    domains='bbc.co.uk,techcrunch.com',
+    from_param=get_current_time(),
+    to=get_current_time(),
+    language='en',
+    sort_by='relevancy',
+    page=1)
+
+sources = newsapi.get_sources()
+
+print(top_headlines)
+print(all_articles)
+print(sources)
+
 
 
 """for politics in politics_websites:
