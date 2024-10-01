@@ -1,0 +1,41 @@
+[33mcommit 4c73bc0305ff8ed3a8bcfe96d4c0b0b5f19d2871[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32maidan[m[33m)[m
+Author: aidanjlee5 <aidanjlee5@gmail.com>
+Date:   Thu Sep 19 10:24:41 2024 -0400
+
+    Add python agent
+
+[33mcommit 3c34150bed7069bbe0334bc6abdd87beeafc57b5[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Aidan Lee <aidanjlee5@gmail.com>
+Date:   Wed Apr 24 12:39:57 2024 -0400
+
+    add the instructor and checks to avoid non-articles
+
+[33mcommit 4d6d1890fbbe13cb9cb93d7478bc7aa6c9443012[m
+Author: Aidan Lee <aidanjlee5@gmail.com>
+Date:   Sat Apr 20 22:32:11 2024 -0400
+
+    testing
+
+[33mcommit dddeb56d60795ab2ba4241c2b1bf8fab71c2bee0[m
+Author: Aidan Lee <aidanjlee5@gmail.com>
+Date:   Sat Apr 20 22:29:14 2024 -0400
+
+    Add the methods to create an automatic webscraper, populate the supabase database, and create an experimental method for scanning through top search results on specific topics
+
+[33mcommit e5512a6c5c479b63195c899fd757a233523b5a51[m
+Author: Aidan Lee <aidanjlee5@gmail.com>
+Date:   Sat Apr 20 11:37:53 2024 -0400
+
+    Add beautiful soup method
+
+[33mcommit 1e65e2616f01818830c8e122d477580d7e4b2cf4[m
+Author: Aidan Lee <aidanjlee5@gmail.com>
+Date:   Fri Apr 19 19:58:00 2024 -0400
+
+    Add the manual search
+
+[33mcommit ea3e6e04b02bfbd98ff922fa6f5ff19e36ac11a9[m
+Author: Farouk Charkas <farouk.charkas@gmail.com>
+Date:   Fri Apr 19 17:15:29 2024 -0400
+
+    Initial commit

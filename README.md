@@ -1,10 +1,14 @@
 # summarai-agent
 The agent for summarai
 
-#Note for Aidan, who's learning
-Python packages - nextjs, pip-install [package]
-Goal- running python script- searches all the topics that Summarai asks? for
-Add support for topics- take a topic-search google for said topic, scrape the website, then run the information to chatgpt, then move it to Supabase
+Instructions for running the python script
+
+Python packages used - nextjs, pip-install [package]
+
+
+Goal- running python script- searches all the topics that Summarai requests for, with the intention of updating daily. 
+
+Add support for topics- manually google websites from certain news sources to filter through to articles only, scrape the website, then run the information to chatgpt, then transfer to the data base
 
 
 
